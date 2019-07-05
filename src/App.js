@@ -6,18 +6,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Anyone wanna play?</h1>
+        <p>Anyonewannaplay is a service to get you playing the games you like to play the most.  Tell us what you like to play and when and we will match you with others with similar interest and skill.</p>
       </header>
     </div>
   );
