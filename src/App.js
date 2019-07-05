@@ -1,16 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Anyone wanna play?</h1>
-        <p>Anyonewannaplay is a service to get you playing the games you like to play the most.  Tell us what you like to play and when and we will match you with others with similar interest and skill.</p>
-      </header>
-    </div>
-  );
-}
+const AboutBlurb = () =>
+  <div className="jumbotron my-3">
+    <h1 className="display-4">Anyone wanna play?</h1>
+    <p className="lead">Play better matches more often.</p>
+    <hr className="my-4" />
+    <p><strong>Currently in alpha.</strong> If you like playing pickleball and are in the Philadelphia, email us to become a beta tester.</p>
+    <a className="btn btn-primary btn-lg" href="mailto:signup@anyonewannaplay.com" role="button">Become a beta tester</a>
+  </div>
+
+const App = () =>
+  <div className="container d-flex align-items-center banner">
+    <AboutBlurb />
+  </div>
 
 export default App;

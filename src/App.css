@@ -1,33 +1,13 @@
-.App {
-  text-align: center;
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffa84c+0,ff7b0d+66 */
+    background: #ffa84c; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffa84c 0%, #ff7b0d 66%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffa84c 0%,#ff7b0d 66%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffa84c 0%,#ff7b0d 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner {
+    height:100vh
 }
