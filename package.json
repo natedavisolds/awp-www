@@ -7,7 +7,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "surge": "^0.21.3"
+    "surge": "^0.21.3",
+    "yarn": "^1.22.4"
   },
   "scripts": {
     "start": "react-scripts start",
