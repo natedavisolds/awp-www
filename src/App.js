@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
@@ -28,37 +28,30 @@ const SignupForm = ({onSignup,onLoading}) => {
     Object.assign({},user,newValue)
   )
 
-  useEffect(() => console.info(user), [user])
-
   const createUser = () => {
-    console.info("Loading")
-    onLoading();
+    if (onLoading) {onLoading();}
 
     const onCreate = (createdUser) => {
-      console.info("Created:",createdUser)
       if (createdUser) { onSignup(createdUser) }
     }
 
-    console.info("Create")
     signupBeta(user).then((result) => { onCreate(result.users[0]) })
   }
 
   return(
-    <div className="form-inline">
+    <form className="form-inline" onSubmit={(e) => {e.preventDefault();}}>
       <p>If you like playing pickleball and are in the Philadelphia, you can sign up using the form below.</p>
-      <div className="form-group mb-2">
+      <div className="form-group ml-2">
         <label className="sr-only">Name</label>
-        <input type="text" className="form-control" onChange={(e) => {updateUser({first_name:e.target.value})}} placeholder="First Name"></input>
-        <input type="text" className="form-control" onChange={(e) => {updateUser({last_name:e.target.value})}} placeholder="Last Name"></input>
+        <input type="text" className="form-control form-control-lg mr-2" onChange={(e) => {updateUser({first_name:e.target.value})}} placeholder="First Name"></input>
+        <input type="text" className="form-control form-control-lg" onChange={(e) => {updateUser({last_name:e.target.value})}} placeholder="Last Name"></input>
       </div>
-      <div className="form-group mb-2">
+      <div className="form-group ml-2">
         <label className="sr-only">Email</label>
-        <input type="email" className="form-control" onChange={(e) => {updateUser({email:e.target.value})}} placeholder="Email"></input>
+        <input type="email" className="form-control form-control-lg" onChange={(e) => {updateUser({email:e.target.value})}} placeholder="Email"></input>
       </div>
-      <div className="form-group mb-2">
-        <button onClick={createUser} className="btn btn-primary btn-lg">Sign Up</button>
-      </div>
-    </div>
+      <button onClick={createUser} className="btn btn-primary btn-lg ml-2">Sign Up</button>
+    </form>
   )
 }
 
@@ -71,7 +64,7 @@ const AboutBlurb = () => {
   const statusForm = (status) => {
     switch(status) {
       case 'creating':
-        return(<span>Creating</span>)
+        return(<span>Signing you up.</span>)
       case "Signed up":
         return(<span>You are signed up as a beta. Please check your email for next steps.</span>)
       default:
